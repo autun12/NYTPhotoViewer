@@ -9,7 +9,7 @@ let package = Package(
     products: [
         .library(
             name: "NYTPhotoViewer",
-            targets: ["NYTPhotoViewer", "NYTPhotoViewerGIF"]
+            targets: ["NYTPhotoViewer"]
             ),
     ],
     dependencies: [
@@ -20,13 +20,13 @@ let package = Package(
             name: "NYTPhotoViewer",
             path: "NYTPhotoViewer"
         ),
-        .target(
-            name: "NYTPhotoViewerGIF",
-            dependencies: ["PINRemoteImage"],
-            path: "SourceSymLink",
-            cSettings: [
-              .define("ANIMATED_GIF_SUPPORT", to: "1")
-            ]
-        )
+        // .target(
+        //     name: "NYTPhotoViewerGIF",
+        //     dependencies: ["PINRemoteImage"],
+        //     path: "SourceSymLink",
+        //     cSettings: [
+        //       .define("ANIMATED_GIF_SUPPORT", to: "1")
+        //     ]
+        // )
     ]
 )
